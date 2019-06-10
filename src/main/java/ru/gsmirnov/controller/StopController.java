@@ -41,6 +41,7 @@ public class StopController extends HttpServlet {
         } catch (NullArgumentException e) {
             StopController.LOG.error(e.getMessage(), e);
         }
-        req.getRequestDispatcher(Constants.PAGE_JSP_WORKTIME).forward(req, resp);
+        //req.getRequestDispatcher(Constants.PAGE_JSP_WORKTIME).forward(req, resp);
+        req.getRequestDispatcher("worktime.html").forward(req, resp);
     }
 }

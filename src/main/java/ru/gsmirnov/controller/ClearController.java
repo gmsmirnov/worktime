@@ -26,6 +26,7 @@ public class ClearController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         this.logic.emptyTable();
-        req.getRequestDispatcher(Constants.PAGE_JSP_WORKTIME).forward(req, resp);
+        //req.getRequestDispatcher(Constants.PAGE_JSP_WORKTIME).forward(req, resp);
+        req.getRequestDispatcher("worktime.html").forward(req, resp);
     }
 }

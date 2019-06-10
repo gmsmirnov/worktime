@@ -42,6 +42,7 @@ public class StartController extends HttpServlet {
         } catch (NullArgumentException | DaoSystemException e) {
             StartController.LOG.error(e.getMessage(), e);
         }
-        req.getRequestDispatcher(Constants.PAGE_JSP_WORKTIME).forward(req, resp);
+        //req.getRequestDispatcher(Constants.PAGE_JSP_WORKTIME).forward(req, resp);
+        req.getRequestDispatcher("worktime.html").forward(req, resp);
     }
 }
