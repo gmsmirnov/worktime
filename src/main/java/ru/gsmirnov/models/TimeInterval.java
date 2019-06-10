@@ -43,8 +43,8 @@ public class TimeInterval {
             result = false;
         } else {
             TimeInterval that = (TimeInterval) o;
-            return this.startTime == that.startTime &&
-                    this.finishTime == that.finishTime;
+            return this.startTime == that.startTime
+                    && this.finishTime == that.finishTime;
         }
         return result;
     }

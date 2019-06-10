@@ -30,11 +30,6 @@ public class StartController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        try {
-//            req.setAttribute(Constants.ATTR_COUNTRIES, this.logic.findCountries());
-//        } catch (DaoSystemException e) {
-//            UserCreateController.LOG.error(e.getMessage(), e);
-//        }
         try {
             HttpSession session = req.getSession();
             if (session.getAttribute(Constants.SESSION_ATTR_IN) == null || !(Boolean) session.getAttribute(Constants.SESSION_ATTR_IN)) {

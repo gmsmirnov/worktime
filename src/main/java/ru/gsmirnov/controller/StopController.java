@@ -31,7 +31,7 @@ public class StopController extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
             HttpSession session = req.getSession();
-            if ((Boolean) session.getAttribute(Constants.SESSION_ATTR_IN)) {
+            if (session.getAttribute(Constants.SESSION_ATTR_IN) != null && (Boolean) session.getAttribute(Constants.SESSION_ATTR_IN)) {
                 this.logic.updateTimeInterval((Integer) session.getAttribute(Constants.SESSION_ATTR_CUR_ID),
                         new TimeInterval(new Timestamp((Long) session.getAttribute(Constants.SESSION_ATTR_START)), new Timestamp(System.currentTimeMillis())));
                 session.removeAttribute(Constants.SESSION_ATTR_CUR_ID);
